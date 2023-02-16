@@ -23,6 +23,9 @@ const Tasklist = () => {
         <form onSubmit={handleSubmit}>
           <input value={newTask} onChange={handleInputChange} placeholder="New Task" type="text" />
           <button type="submit">Create Task</button>
+          <button type="button" onClick={()=>tasks.clearList()}>Clear list</button>
+          <button type="button" onClick={()=>tasks.sortList()}>Sort list</button>
+          <button type="button" onClick={()=>tasks.invertList()}>Invert list</button>
         </form>
         { tasks.isEmpty()
             ? (<p>Task List is Empty</p>)

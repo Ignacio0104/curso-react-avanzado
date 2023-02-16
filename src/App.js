@@ -4,13 +4,15 @@ import { useCallback, useMemo, useState } from 'react';
 import EjemploUseBoolean from './components/CustomHooks/EjemploUseBoolean';
 import TaskList from './components/lists/TaskList';
 import Settings from './components/settings/Settings';
+import Contador from './components/EjercicioContador/contador';
 
 
 function App() {
   return (
     <div>
     <TaskList></TaskList>
-    <Settings></Settings>
+    {/* <Settings></Settings> */}
+    <Contador></Contador>
    </div>
   );
 }

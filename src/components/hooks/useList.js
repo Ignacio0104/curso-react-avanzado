@@ -18,8 +18,14 @@ const useList = (initialValue = []) => {
 
     // TODO:Develop more functions for lists
 
+    const clearList =()=> setValue([]);
+
+    const sortList = () => setValue([...value].sort())
+
+    const invertList = () => setValue([...value].reverse())
+
     return {
-            value, setValue, push, remove, isEmpty,
+            value, setValue, push, remove, isEmpty, clearList,sortList,invertList
         };
 };
 
