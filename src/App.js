@@ -2,11 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { useCallback, useMemo, useState } from 'react';
 import EjemploUseBoolean from './components/CustomHooks/EjemploUseBoolean';
+import TaskList from './components/lists/TaskList';
+import Settings from './components/settings/Settings';
 
 
 function App() {
   return (
-   <EjemploUseBoolean></EjemploUseBoolean>
+    <div>
+    <TaskList></TaskList>
+    <Settings></Settings>
+   </div>
   );
 }
 
