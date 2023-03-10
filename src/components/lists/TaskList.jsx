@@ -23,7 +23,7 @@ const Tasklist = ({toggleSettings,showSettings}) => {
       <h1 
         className="text-3xl text-sky-700 font-semibold
         dark:text-sky-300">
-          Task List hosted on firebase Version 2
+          Task List hosted on firebase Version 3
         </h1>
         <button onClick={toggleSettings} className='btn'>{showSettings ? "Hide setting" : "Show settings"} </button>
       </header>
