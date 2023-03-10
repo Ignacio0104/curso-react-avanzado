@@ -6,26 +6,29 @@ const defaultConfig = {
     lang: 'es',
 }; 
 
-export default function Settings() {
+export default function Settings({toggleDark}) {
     const [config, setConfig] = useLocalStorage('config', defaultConfig);
 
+
     const handleClick = (event) => {
-        event.preventDefault();
-        setConfig((oldConfig) => (
-            {
-            ...oldConfig,
-            theme: 'light',
-            }));
+     event.preventDefault();
+    setConfig((oldConfig) => ({
+      ...oldConfig,
+      theme: oldConfig.theme === "light" ? "dark" : "light",
+    }));
+    toggleDark();
     };
 
     return (
-      <div>
-        <h1>APP SETTINGS</h1>
-        <p>
-          Actual Config: <br></br>
-          { `Theme ${config.theme} - Lang ${config.lang}`}
+      <div className='text-right'>
+      <hr className='my-4'></hr>
+        <h1 className='text-3xl text-cyan-800 font-semibold mb-4
+        dark:text-cyan-400'>APP SETTINGS</h1>
+        <p className='text-sm'>
+          Actual Config: 
+          <span className='italic'>{ `Theme ${config.theme}`}</span>
         </p>
-        <button type="button" onClick={handleClick}>
+        <button className="btn mt-4" type="button" onClick={handleClick}>
           Save New Settings
         </button>
       </div>
